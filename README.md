@@ -188,6 +188,62 @@ from [Vue JS 2.0 - Mastering Web Apps](https://www.udemy.com/vue-web-apps/learn/
 
 ### Chapter - 07 - Lifecycle Hooks
 
-```html
+created, mounted Hooks
 
+```html
+<body>
+  <div id="app">
+    <div class="">
+      Hello World
+    </div>
+  </div>
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+        
+      },
+      methods: {
+        alertTime(val) {
+          alert(`This ${val} time is ${Date.now().toLocaleString()}`)
+        }
+      },
+      created() {
+        this.alertTime("created")
+      },
+      mounted() {
+        this.alertTime("mounted")
+      }
+    });
+  </script>
+</body>
+```
+
+updated Hooks
+
+```html
+<body>
+  <div id="app">
+    <div class="">
+      Count : {{ count }}
+    </div>
+    <button class="vue-btn" @click="increment">Increment</button>
+  </div>
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+        count: 0
+      },
+      methods: {
+       increment() {
+         this.count++
+       }
+      },
+      updated() {
+        console.log('this.count', this.count)
+      }
+    });
+  </script>
+</body>
 ```
