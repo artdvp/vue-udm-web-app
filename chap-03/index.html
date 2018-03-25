@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue App Chap - 3 - V-for for List Rendering </title>
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+
+<body>
+  <div class="" id="app">
+    <ul>
+      <li v-for="color in xcolors">
+        {{ color.text }}
+      </li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+       colors: ['red','green','blue','yellow','orange'],
+       xcolors: [
+         {
+           text: 'red',
+           primary: false
+         },
+         {
+           text: 'green',
+           primary: true
+         },
+         {
+           text: 'blue',
+           primary: false
+         },
+         {
+           text: 'yellow',
+           primary: false
+         },
+         {
+           text: 'orange',
+           primary: false
+         }
+       ]
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -40,3 +40,9 @@ from [Vue JS 2.0 - Mastering Web Apps](https://www.udemy.com/vue-web-apps/learn/
   </script>
 </body>
 ```
+
+### Chapter - 03 - V-for for List Rendering
+
+```hmtl
+
+``` 
