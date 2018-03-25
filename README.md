@@ -109,3 +109,53 @@ from [Vue JS 2.0 - Mastering Web Apps](https://www.udemy.com/vue-web-apps/learn/
 ```
 
 ### Chapter - 05 - Components
+
+```html
+<body>
+  <div id="app">
+    <counter :add-num="5"></counter>
+    <br>
+    <counter :add-num="10"></counter>
+    <br>
+    <counter :add-num="20"></counter>
+  </div>
+  <script type="text/javascript">
+    var counter = Vue.component('counter', {
+      template: `
+        <div>
+          <div>Count: {{this.count}}</div>
+          <br>
+          <button class="vue-btn" @click="increment">Increment by {{ this.addNum }}</button> 
+        </div>
+      `,
+      props: {
+        addNum: {
+          type: Number,
+          default: 1
+        }
+      },
+      data() {
+        return {
+          count: 0
+        }
+      },
+      methods: {
+        increment() {
+          this.count += this.addNum
+        }
+      }
+    });
+
+
+    var app = new Vue({
+      el: '#app',
+      components: {
+        counter
+      },
+      data: {
+
+      }
+    });
+  </script>
+</body>
+```
