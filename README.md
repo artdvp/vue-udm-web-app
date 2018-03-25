@@ -83,3 +83,27 @@ from [Vue JS 2.0 - Mastering Web Apps](https://www.udemy.com/vue-web-apps/learn/
   </script>
 </body>
 ``` 
+
+### Chapter - 04 - V-on for clicking
+
+```html
+<body>
+  <div class="" id="app">
+    <!-- <button class="vue-btn" v-on:click="reveal">Reveal the Secret Number</button> -->
+    <button class="vue-btn" @click="reveal">Reveal the Secret Number</button>
+  </div>
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+        secretNumber: Math.floor(Math.random() * 100) + 1
+      },
+      methods: {
+        reveal() {
+          alert(`Here's the secret number: ${this.secretNumber}`)
+        }
+      }
+    });
+  </script>
+</body>
+```

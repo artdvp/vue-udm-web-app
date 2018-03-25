@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue App Chap - 4 - V-on for clicking</title>
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+
+<body>
+  <div class="" id="app">
+    <!-- <button class="vue-btn" v-on:click="reveal">Reveal the Secret Number</button> -->
+    <button class="vue-btn" @click="reveal">Reveal the Secret Number</button>
+  </div>
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+        secretNumber: Math.floor(Math.random() * 100) + 1
+      },
+      methods: {
+        reveal() {
+          alert(`Here's the secret number: ${this.secretNumber}`)
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
