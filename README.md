@@ -43,6 +43,43 @@ from [Vue JS 2.0 - Mastering Web Apps](https://www.udemy.com/vue-web-apps/learn/
 
 ### Chapter - 03 - V-for for List Rendering
 
-```hmtl
-
+```html
+<body>
+  <div class="" id="app">
+    <ul>
+      <li v-for="color in xcolors" v-if="color.primary">
+        {{ color.text }}
+      </li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+        colors: ['red', 'green', 'blue', 'yellow', 'orange'],
+        xcolors: [{
+            text: 'red',
+            primary: false
+          },
+          {
+            text: 'green',
+            primary: true
+          },
+          {
+            text: 'blue',
+            primary: false
+          },
+          {
+            text: 'yellow',
+            primary: true
+          },
+          {
+            text: 'orange',
+            primary: true
+          }
+        ]
+      }
+    });
+  </script>
+</body>
 ``` 
