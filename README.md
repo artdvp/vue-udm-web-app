@@ -107,3 +107,5 @@ from [Vue JS 2.0 - Mastering Web Apps](https://www.udemy.com/vue-web-apps/learn/
   </script>
 </body>
 ```
+
+### Chapter - 05 - Components

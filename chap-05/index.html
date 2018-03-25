@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue App Chap - 5 - Components </title>
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+
+<body>
+  <div id="app">
+    <counter></counter>
+  </div>
+  <script type="text/javascript">
+    var counter = Vue.component('counter', {
+      template: `
+        <div>
+          <div>Count: {{this.count}}</div>
+          <br>
+          <button class="vue-btn" @click="increment">Increment by 1</button> 
+        </div>
+      `,
+      data() {
+        return {
+          count: 0
+        }
+      },
+      methods: {
+        increment() {
+          this.count++
+        }
+      }
+    });
+
+
+    var app = new Vue({
+      el: '#app',
+      components: {
+        counter
+      },
+      data: {
+
+      }
+    });
+  </script>
+</body>
+
+</html>
