@@ -11,7 +11,7 @@
 <body>
   <div class="" id="app">
     <ul>
-      <li v-for="color in xcolors">
+      <li v-for="color in xcolors" v-if="color.primary">
         {{ color.text }}
       </li>
     </ul>
@@ -36,11 +36,11 @@
          },
          {
            text: 'yellow',
-           primary: false
+           primary: true
          },
          {
            text: 'orange',
-           primary: false
+           primary: true
          }
        ]
       }
