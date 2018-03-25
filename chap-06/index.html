@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue App Chap - 6 - V-model and Computered Properties</title>
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+
+<body>
+  <div id="app">
+    <span>Change the text</span>
+   <input type="text" v-model="text" placeholder="text...">
+   <br><br>
+   <div>Lowercased : {{ lowerText }}</div>
+  </div>
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+        text: ''
+      },
+      computed: {
+        lowerText() {
+          return this.text.toLowerCase()
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

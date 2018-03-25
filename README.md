@@ -159,3 +159,29 @@ from [Vue JS 2.0 - Mastering Web Apps](https://www.udemy.com/vue-web-apps/learn/
   </script>
 </body>
 ```
+
+### Chapter - 06 - V-model and Computered Properties
+
+```html
+<body>
+  <div id="app">
+    <span>Change the text</span>
+   <input type="text" v-model="text" placeholder="text...">
+   <br><br>
+   <div>Lowercased : {{ lowerText }}</div>
+  </div>
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+        text: ''
+      },
+      computed: {
+        lowerText() {
+          return this.text.toLowerCase()
+        }
+      }
+    });
+  </script>
+</body>
+```
